@@ -1,0 +1,109 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+body {
+  background-color: rgba(228, 128, 69, 0.08);
+}
+h1 {
+  color: #83B8C7;
+  text-align: center;
+  font-size: 60px;
+}
+#app {
+  margin-top: 20px;
+}
+.box {
+  box-shadow: 0 0px 2px 0 rgba(78, 85, 88, 0.34), 0 20px 20px 0 rgba(0, 0, 0, 0.09);
+  margin-top: 15px;
+  background-color: white;
+}
+.box .box-header input {
+  line-height: 1.4em;
+  font-size: 24px;
+  padding: 15px 15px 15px 7px;
+  border: none;
+  height: 70px;
+  outline: none;
+  box-shadow: none;
+}
+.box .box-header button {
+  border-radius: 0;
+  height: 70px;
+  background-color: #60C8A0;
+  border-color: #60C8A0;
+}
+.box table tr>td:first-child {
+  padding-left: 20px;
+  font-size: 22px;
+  color: #525252;
+}
+.box table tr>td:nth-child(2) {
+  text-align: center;
+  position: relative;
+}
+.box table tr:last-child button {
+  margin-right: 5px;
+  background-color: white;
+  border: solid thin rgba(128, 128, 128, 0.28);
+}
+.box table .btn-delete {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 50px;
+  margin: auto 0;
+  font-size: 30px;
+  color: rgba(204, 96, 96, 0.66);
+  /* margin-bottom: 11px; */
+  transition: color 0.2s ease-out;
+  border: none;
+  background: none;
+}
+.box table tr:hover .btn-delete {
+  display: block;
+}
+.box table .btn-delete:after {
+  content: '×';
+}
+.box table .glyphicon.glyphicon-remove {
+  color: #E37070;
+  font-size: 20px;
+  font-weight: 100;
+}
+svg {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: -.5em;
+  top: .1em;
+  border: 1px solid #C7C7C7;
+  border-radius: 5px;
+}
+label {
+  display: inline-block;
+  padding-left: 1.5em;
+  position: relative;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  opacity: 0;
+}
+label svg path {
+  transition: stroke-dashoffset .3s linear;
+}
+input[type="checkbox"]:checked ~ label svg path {
+  stroke-dashoffset: 0;
+}
+input[type="checkbox"]:checked ~ label {
+  color: rgba(91, 167, 141, 0.49);
+  text-decoration: line-through;
+}
+div.checkbox-container {
+  font-size: 5em;
+  margin: 3em auto;
+  width: 7em;
+  color: #fff;
+  font-family: Indie Flower;
+}
